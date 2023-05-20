@@ -1,0 +1,723 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>美力生存戰 做個靚技場上的大贏家</title>
+
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<script src="https://www.vogue.com.tw/2016events/assets/js/jquery.min.js"></script>
+<script src="https://www.vogue.com.tw/2016events/assets/js/jquery.parallax-scroll.js"></script>
+	
+<script src="https://www.vogue.com.tw/2016events/assets/js/TweenMax.min.js"></script>	
+<!--		
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.1/gsap.min.js"></script>	-->
+<script src="js/script.js"></script>
+	<style>
+	
+	.pclose{position:absolute; right: 0px; top:0px; z-index: 9999;cursor: pointer;width:50px; height:50px; border:1px solid #888 ; background: #fff }
+.pclose span:after, .pclose span:before{ content:""; width:90%; height:1px; background:#888 ; transform:rotate(45deg); position:absolute; top:50%; left:2px; transition:all .6s}
+.pclose span:after{transform:rotate(-45deg);}
+.pclose:hover span:after,.pclose:hover span:before{transform:rotate(360deg);}
+	
+	.black{ width: 100%; height: 100%; position: fixed;top: 0px;left: 0px; background: #000; z-index: 99; opacity: 0.7; display: ; cursor: pointer;}
+	.winner{position: fixed; width: 100%; height: 100%;top:0;left:0; z-index: 999}
+.winner_content {width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; position: relative;}
+	.winner_inner{background: #fff; width: 90%; max-width: 500px; padding: 10px; text-align: center; position: relative;}
+	.winner_inner p {text-align: center}
+		.winner_inner p span{font-size: 13px; font-weight: 700;color:#888}
+	.border{border:1px solid #ccc; padding: 20px  }
+	</style>
+		<script>
+
+	$(function (){
+
+		var black=$('.black')
+		var pclose=$('.pclose')
+		black.click(function (){
+			$('.winner').css({"display":"none"})	
+			$(this).css({"display":"none"})	
+			pclose.css({"display":"none"})	
+		})
+		pclose.click(function (){
+			$('.winner').css({"display":"none"})	
+			black.css({"display":"none"})
+			$(this).css({"display":"none"})	
+		})
+	})
+
+
+</script>
+</head>
+
+<body>
+		<div class="black"></div>
+	
+	<div class="winner">
+	
+		<div class="winner_content">
+			
+			<div class="winner_inner">
+				<div class="border">
+				<div class="pclose"><span></span></div>
+	<h3>得獎公告</h3>
+<p ><span style="display: inline-block; padding: 5px 0; color:#333; font-size:20px;line-height: 1.4;">感謝網友熱情參加本次活動<br>
+恭喜以下7位幸運兒</span>
+<br>
+<span>Dior Beauty 精萃再生光燦防護隔離霜 </span>  <br>
+邱*娸   m*gg**1*06***2@gmail.com  <br>
+
+<span>THREE 平衡潔膚油R </span> <br>
+黃*庭  pe*n*00***6@gmail.com  <br>
+
+<span>Sisley 璀璨鑽白濃縮精華 </span>  <br>
+陳*慈  f*li**a**9@msn.com  <br>
+
+<span>Panasonic EH-NA55 吹風機 </span>  <br>
+葉*柔  k**s4**14@gmail.com  <br>
+
+<span>Lancome 超極光活粹晶露  </span> <br>
+吳*渝  n5**86@yahoo.com.tw  <br>
+
+<span>Shiseido  雲朵空氣慕斯 、雪舞動感霧</span> <br>
+徐*瑄  o*e*d.*er@gmail.com  <br>
+
+<span>Estee Lauder Pro 極速光感煥白全能精華 </span> <br>
+周*羽  j*0*2*4@gmail.com <br>
+	
+	</p>
+	</div></div>
+	</div>
+	</div>
+	
+	
+	
+
+<div class="loading flex">
+   <div class="waveContainer">
+	 
+	   <div class="wave one">
+    </div>
+    <div class="wave two">
+    </div>
+    <div class="wave three">
+    </div>
+	     <div class="text">LOADING</div>
+    </div>
+</div>
+
+
+<div class="wrapper">
+	
+	
+	<div class="logo"><img src="images/vogue.png" alt="vogue beauty"></div>
+	<div class="info_icon ab"><span class="cir">!</span> <br><span class="txt">活動說明</span></div>
+    
+	<div class="cover wh100 ">
+	
+      <div class="wh100 bg ">
+          <div class="left_beauty ab"></div>
+          <div class="right_beauty ab"> </div>
+		  <div class="linebg">
+          <div class="blueparty "><h4>徽章導師</h4><div class="model ab"></div></div>
+          <div class="goldparty "><h4>金牌導師</h4><div class="model  ab"></div></div>
+          <div class="redparty "><h4>聖火導師</h4><div class="model  ab"></div></div> 
+	      </div>
+      </div>
+		
+	<!--第一頁kv-->
+	   <div id="kv" class=" wh100 flex ">
+		  <div class="wrap_kv">
+              <div class="left_model ab"><img src="images/left.png" alt=""></div>
+              <div class="right_model ab"><img src="images/right.png" alt=""></div>
+			  <div class="middle_model ab"><img class="goldman" src="images/middle.png" alt=""> 
+			    <div class="title  ab"><img src="images/title.png" alt="美力生存戰"></div>	
+			   <div class="btn_start  ab"><span class="light_top ab"></span><img src="images/btn_start.png" alt="start"><span class="light_bottom ab"></span></div>  
+			  </div>
+		   </div>
+	     </div>
+	<!--第一頁kv end-->
+		
+		
+		
+				<!--活動說明 start-->	
+		 <div id="detail" class="wh100 flex  hide ">
+		     <div class="frame">
+		
+				 
+			<div  class="wrap_frame  ">
+				<div class="close_icon"> <span></span></div>
+			    <div class="frame_left ">
+				   <span class="frame_top"></span>
+				   <div class="keymodel"><img src="images/kv.png" alt=""></div>
+				<span class="frame_bottom"></span>
+				</div>
+				 <div class="info flex">
+					 
+					 <div class="scrollable">
+
+<h5>活動時間：</h5>
+自2020/03/05 ～ 2020/03/31<br>
+ <h5>活動說明：</h5>
+參加活動後，填寫表單並公開分享至facebook就有機會把專櫃正貨帶回家，每個獎項各抽一名。						 
+
+<h5>獎品說明：</h5>
+Dior Beauty 精萃再生光燦防護隔離霜 一瓶 (價值$4,000元)<br>
+Esstee Lauder Pro 極速光感煥白全能精華 (價值$2,900元)<br>
+Lancome 超極光活粹晶露 (價值$3,500元)<br>
+Panasonic EH-NA55  吹風機 (價值$3,290元)<br>
+Sisley 璀璨鑽白濃縮精華 (價值$11,500元)<br>
+THREE 平衡潔膚油R (價值$3,600元)<br>
+
+<h5>得獎公佈：</h5>
+得獎名單將於 2020 年 04 月底前公佈於活動網站上<br>
+<h5>通知方式：</h5>
+得獎者獎統一於 VOGUE 活動網站上公佈，並以Email通知。<br>
+<h5>獎品寄送：</h5>
+活動獎品將於 2020 年04月陸續寄出。<br>
+<h5>注意事項：</h5>
+<ul>  
+<li>參加此活動者視為同意此活動辦法與注意事項，如有違反，主辦單位得取消期參加或得獎資格。</li>
+<li>參加者保證所填寫或提出之資料皆為真實且正確，未冒用或盜用任何第三人之資料，如有不實或部正確知情事，主辦單位得以取消其參加或得獎資格。</li>
+<li>本次活動獎品寄送地址僅限於台灣地區。</li>
+<li>本活動獎項以公布於本網站上的資料為準，如遇不可抗拒之因素，主辦單位保留更換其它等值獎項之權利，主辦單位有權取消、終止、修改或暫停本活動。</li>
+<li>主辦單位保留調整本活動期間、抽獎日期與公布日期之最終變更權限。</li>
+						 </ul>
+				
+				 </div>
+				 </div>
+			 </div>
+				 	
+		
+			 </div>
+		 </div>
+		
+		<!--活動說明 end-->
+		
+		
+		<!--frame start-->	
+		
+		 <div id="frame" class="wh100 flex  hide ">
+		     <div class="frame">
+	
+				 	<!--前言 start-->	
+			<div id="a0" class="wrap_frame hide ">
+			    <div class="frame_left ">
+				   <span class="frame_top"></span>
+				   <div class="keymodel"><img src="images/kv.png" alt=""></div>
+				<span class="frame_bottom"></span>
+				</div>
+				 <div  class="info flex">
+					 <div>
+				   <h2> <img src="images/forplaytitle.png" alt=""></h2>
+					 <p>在美的靚技場上，不只要拼顏值，更要拼實力，<br>
+考考妳的美妝 IQ，測測你的美麗 SENSE，<br>
+現在就讓 VOGUE 檢驗你對於美妝知識的了解與掌握度有多少，<br>
+分享活動就有機會把專櫃保養品正貨帶回家！</p>
+				  <div class="btn go">
+					 <a href="javascript:void(0)" >
+					 立即參賽 START <span class="arrow_right"></span>
+					
+					 </a>
+						 <div class="light_bottom"></div> 
+				  </div>
+				 </div>
+				 </div>
+			 </div>
+				 	<!--前言 end-->	
+				 
+			<!--Q1 start-->	
+			<div id="q1" class="wrap_frame question  hide">
+			    <div class="frame_left ">
+				   <span class="frame_top"></span>
+				   <div class="keymodel"><img src="images/kv.png" alt=""></div>
+					<p>Question<br><span class="num">1</span></p>
+				<span class="frame_bottom"></span>
+				</div>
+				 <div class="info flex">
+					 <!--timer-->	
+					 <div class="timer ab"><span class="name_time">TIMER</span><div class="liner"><div><span></span></div></div></div>
+					 
+					 <div> 
+				   <h3 class="q_title">敏感肌注定和美白產品無緣？</h3>
+				  <div class="btn_yesno" >	
+				      <a href="javascript:void(0)"><span>YES</span><img class="light" src="images/light.png" alt=""></a> 
+				       <a href="javascript:void(0)"><span>NO</span><img class="light" src="images/light.png" alt=""></a>	 
+				  </div> 
+						 
+				 </div>
+				 </div>
+			 </div>
+				 	<!--Q1 end-->	
+				
+				 	 
+			<!--Q1 answer-->	
+			<div id="a1" class="wrap_frame question  hide">
+			    <div class="frame_left ">
+				   <span class="frame_top"></span>
+				  
+				<div class="product flex"><div><img src="images/dior.png" alt=""></div></div>
+				<span class="frame_bottom"></span>
+				</div>
+				 <div class="info flex answer">
+					 
+					 <div>
+				   <h4><span>NO</span>敏感肌注定和美白產品無緣？</h4>
+						 		
+					 <p>並非所有美白產品都不適合敏感肌！養成局部測試後再開始使用的好習慣，確定沒有敏感現象再使用。
+						 </p>
+						 <p>
+						 <strong>迪奧精萃再生光燦淨白精華</strong> 是敏弱肌膚可用且兼具高效淨白功效的頂級精華，因為這款精華天然成分高達84%，即使是醫美療程後的敏弱肌也可使用！
+						 </p>
+				  <div class="btn">
+					 <a href="javascript:void(0)" >
+					繼續下一題 NEXT <span class="arrow_right"></span>
+					
+					 </a>
+						 <div class="light_bottom"></div> 
+				  </div>
+				 </div>
+				 </div>
+				
+				<div class="gold_s"><img src="images/gold_s.png" alt=""></div>
+			 </div>
+				 	<!--Q1 answer-->	
+
+				 <!--Q2 start-->	
+			<div id="q2"   class="wrap_frame question hide ">
+			    <div class="frame_left ">
+				   <span class="frame_top"></span>
+				   <div class="keymodel"><img src="images/kv.png" alt=""></div>
+					<p>Question <br><span>2</span></p>
+				<span class="frame_bottom"></span>
+				</div>
+				
+				 <div class="info flex">
+					  <!--timer-->	
+					 <div class="timer ab"><span class="name_time">TIMER</span><div class="liner"><div><span></span></div></div></div>
+					 
+					 <div>
+				   <h3>無論是哪種膚色的人，<br>掌心和腳底都比其他部位亮白？</h3>
+				  <div class="btn_yesno" >	
+				  <a href="javascript:void(0)"><span>YES</span><img class="light" src="images/light.png" alt=""></a> 
+					<a href="javascript:void(0)"><span>NO</span><img class="light" src="images/light.png" alt=""></a>	 
+					 </div> 
+						 
+				 </div>
+				 </div>
+			 </div>
+				 	<!--Q2 end-->	
+				
+				 	 	 
+			<!--Q2 answer-->	
+			<div id="a2"  class="wrap_frame question hide   ">
+			    <div class="frame_left ">
+				   <span class="frame_top"></span>
+				  
+				<div class="product flex"><div><img src="images/sisley.png" alt=""></div></div>
+				<span class="frame_bottom"></span>
+				</div>
+				 <div class="info flex answer">
+					 <div>
+				   <h4><span>YES</span>無論是哪種膚色的人，掌心和腳底都比其他部位亮白？</h4>
+					
+					 <p>日本研究發現，差異就在於掌心區的肌膚會產生一種叫做DKK1的蛋白，是天然的黑色素抑制劑，但其他部位沒有，因此不易黑色素沉澱。
+						 </p>
+						 <p>Sisley 率先將這套理論應用於臉部保養，推出<strong>《璀璨鑽白濃縮精華》</strong>，模擬了這個抑制劑的成分，重現掌心的亮白效果，還原肌膚的明亮狀態。
+						 </p>
+				  <div class="btn">
+					 <a href="javascript:void(0)" >
+					繼續下一題 NEXT <span class="arrow_right"></span>
+					
+					 </a>
+						 <div class="light_bottom"></div> 
+				  </div>
+				 </div>
+				 </div>
+				
+				<div class="red_s"><img src="images/red_s.png" alt=""></div>
+			 </div>
+				 	<!--Q2 answer-->	
+				 
+				 
+				  <!--Q3 start-->	
+			<div id="q3" class="wrap_frame question hide ">
+			    <div class="frame_left ">
+				   <span class="frame_top"></span>
+				   <div class="keymodel"><img src="images/kv.png" alt=""></div>
+					<p>Question <br><span>3</span></p>
+				<span class="frame_bottom"></span>
+				</div>
+				 <div class="info flex">
+					 
+					 	  <!--timer-->	
+					 <div class="timer ab"><span class="name_time">TIMER</span><div class="liner"><div><span></span></div></div></div>
+					 
+					 <div>
+				   <h3>解決肌膚粗糙、暗沈只能靠<br>去除老廢角質？</h3>
+				  <div class="btn_yesno" >	
+				  <a href="javascript:void(0)"><span>YES</span><img class="light" src="images/light.png" alt=""></a> 
+					<a href="javascript:void(0)"><span>NO</span><img class="light" src="images/light.png" alt=""></a>	 
+					 </div> 
+						 
+				 </div>
+				 </div>
+			 </div>
+				 	<!--Q3 end-->	
+				 		 	 	 
+			<!--Q3 answer-->	
+			<div  id="a3" class="wrap_frame question  hide ">
+			    <div class="frame_left ">
+				   <span class="frame_top"></span>
+				  
+				<div class="product flex"><div><img src="images/lancome.png" alt=""></div></div>
+				<span class="frame_bottom"></span>
+				</div>
+				 <div class="info flex answer">
+					 <div>
+				   <h4><span>NO</span>解決肌膚粗糙、暗沈只能靠去除老廢角質？</h4>
+						
+					 <p>當感覺肌膚粗糙、暗沉，去角質的確有幫助，但不是每個人都需要去角質！只要做足保濕，當角質被養好，肌膚自然摸起來柔嫩也透亮。
+						 </p>
+						 <p>
+						<strong>蘭蔻《超極光活粹晶露》</strong>的酵素成分可確保老廢角質順利被淘汰，並掌控膚色與斑點狀態，幫助肌膚保持光澤、使肌膚更顯平滑。
+						 </p>
+				  <div class="btn">
+					 <a href="javascript:void(0)" >
+					繼續下一題 NEXT <span class="arrow_right"></span>
+					
+					 </a>
+						 <div class="light_bottom"></div> 
+				  </div>
+				 </div>
+				 </div>
+				
+				<div class="red_s"><img src="images/red_s.png" alt=""></div>
+			 </div>
+				 	<!--Q3 answer-->	
+				 
+				 	
+				 
+				  <!--Q4 start-->	
+			<div id="q4" class="wrap_frame question  hide">
+			    <div class="frame_left ">
+				   <span class="frame_top"></span>
+				   <div class="keymodel"><img src="images/kv.png" alt=""></div>
+					<p>Question <br><span>4</span></p>
+				<span class="frame_bottom"></span>
+				</div>
+				 <div class="info flex">
+					  	  <!--timer-->	
+					 <div class="timer ab"><span class="name_time">TIMER</span><div class="liner"><div><span></span></div></div></div>
+					 
+					 <div>
+				   <h3 class="fzs">就算不出門、不曬太陽，<br>在家滑手機、追劇也是會長斑點？</h3>
+				  <div class="btn_yesno" >	
+				  <a href="javascript:void(0)"><span>YES</span><img class="light" src="images/light.png" alt=""></a> 
+					<a href="javascript:void(0)"><span>NO</span><img class="light" src="images/light.png" alt=""></a>	 
+					 </div> 
+						 
+				 </div>
+				 </div>
+			 </div>
+				 	<!--Q4 end-->	
+				 		 	 	 
+				 	<!--Q4 answer-->	
+			<div  id="a4" class="wrap_frame question  hide ">
+			    <div class="frame_left ">
+				   <span class="frame_top"></span>
+				  
+				<div class="product flex"><div><img src="images/three.png" alt=""></div></div>
+				<span class="frame_bottom"></span>
+				</div>
+				 <div class="info flex answer">
+					 <div>
+				   <h4><span>YES</span>就算不出門、不曬太陽，在家滑手機、追劇也是會長斑點？</h4>
+						
+					 <p>別以為沒曬太陽就不需要淡斑、除斑！3C的藍光和日光這些人工有害光都是導致斑點生成的原因。
+						 </p>
+						 <p>
+<strong>THREE平衡淨白精華液</strong> 加了日本安全認證美白成分熊果素，不只針對紫外線引起的斑點，甚至是3C藍光造成肌膚隱性斑點，都可以解決！
+						 </p>
+				  <div class="btn">
+					 <a href="javascript:void(0)" >
+					繼續下一題 NEXT <span class="arrow_right"></span>
+					
+					 </a>
+						 <div class="light_bottom"></div> 
+				  </div>
+				 </div>
+				 </div>
+				
+				<div class="gold_s"><img src="images/gold_s.png" alt=""></div>
+			 </div>
+				 	<!--Q4 answer-->
+				 
+				 
+				 	  <!--Q5 start-->	
+			<div id="q5" class="wrap_frame question   hide ">
+			    <div class="frame_left ">
+				   <span class="frame_top"></span>
+				   <div class="keymodel"><img src="images/kv.png" alt=""></div>
+					<p>Question <br><span>5</span></p>
+				<span class="frame_bottom"></span>
+				</div>
+				 <div class="info flex">
+					  <!--timer-->	
+					 <div class="timer ab"><span class="name_time">TIMER</span><div class="liner"><div><span></span></div></div></div>
+					 <div>
+				   <h3 class="fzs" >儘管沒有染、燙頭髮，<br>紫外線也會把頭髮曬傷、曬乾？</h3>
+				  <div class="btn_yesno" >	
+				  <a href="javascript:void(0)"><span>YES</span><img class="light" src="images/light.png" alt=""></a> 
+					<a href="javascript:void(0)"><span>NO</span><img class="light" src="images/light.png" alt=""></a>	 
+					 </div> 
+						 
+				 </div>
+				 </div>
+			 </div>
+				 	<!--Q5 end-->	
+				 
+				 	<!--Q5 answer-->	
+			<div id="a5" class="wrap_frame question hide  ">
+			    <div class="frame_left ">
+				   <span class="frame_top"></span>
+				  
+				<div class="product flex"><div><img src="images/shiseido.png" alt=""></div></div>
+				<span class="frame_bottom"></span>
+				</div>
+				 <div class="info flex answer">
+					 <div>
+				   <h4><span>YES</span>儘管沒有染、燙頭髮，紫外線也會把頭髮曬傷、曬乾？</h4>
+						
+					 <p>頭髮是太陽最容易直射的地方，它所接受到的紫外線更是臉的兩倍以上！紫外線更是害頭髮失去光澤的元兇之一！
+						 </p>
+						 <p>
+						<strong>資生堂《全效完美防護精露》</strong>能保護秀髮免於6大環境損害因子，保護秀髮遠離褪色、毛躁、髮絲斷裂等困擾！
+						 </p>
+				  <div class="btn">
+					 <a href="javascript:void(0)" >
+					繼續下一題 NEXT <span class="arrow_right"></span>
+					
+					 </a>
+						 <div class="light_bottom"></div> 
+				  </div>
+				 </div>
+				 </div>
+				
+				<div class="red_s"><img src="images/red_s.png" alt=""></div>
+			 </div>
+				 	<!--Q5 answer-->
+				 
+				  <!--Q6 start-->	
+			<div id="q6" class="wrap_frame question  hide   ">
+			    <div class="frame_left ">
+				   <span class="frame_top"></span>
+				   <div class="keymodel"><img src="images/kv.png" alt=""></div>
+					<p>Question <br><span>6</span></p>
+				<span class="frame_bottom"></span>
+				</div>
+				 <div class="info flex">
+					  <!--timer-->	
+					 <div class="timer ab"><span class="name_time">TIMER</span><div class="liner"><div><span></span></div></div></div>
+					 <div>
+				   <h3 >吹頭髮也能改善髮質？</h3>
+				  <div class="btn_yesno" >	
+				  <a href="javascript:void(0)"><span>YES</span><img class="light" src="images/light.png" alt=""></a> 
+					<a href="javascript:void(0)"><span>NO</span><img class="light" src="images/light.png" alt=""></a>	 
+					 </div> 
+						 
+				 </div>
+				 </div>
+			 </div>
+				 	<!--Q6 end-->	
+				  	<!--Q6 answer-->	
+			<div id="a6" class="wrap_frame question hide  ">
+			    <div class="frame_left ">
+				   <span class="frame_top"></span>
+				  
+				<div class="product hairdryer flex"><div><img  src="images/panasonic.png" alt=""></div></div>
+				<span class="frame_bottom"></span>
+				</div>
+				 <div class="info flex answer">
+					 <div>
+				   <h4><span>YES</span>吹頭髮也能改善髮質？</h4>
+						
+					 <p>新科技時代來臨，吹風機也被改良成不再是傷害髮質、高輻射性的產品。保持良好髮質的秘訣，除了定期護髮外，每天使用的吹風機也是關鍵！
+						 </p>
+						 <p>
+					<strong>Panasonic的全新「奈米水離子吹風機 EH-NA9B」</strong>擁有獨家的保濕科技，能安心吹乾頭髮，完全不必擔心傷害毛鱗片，根本就是頭髮「吹的保養品」！
+						 </p>
+				  <div class="btn">
+					 <a href="javascript:void(0)" >
+					最後一題 NEXT <span class="arrow_right"></span>
+					
+					 </a>
+						 <div class="light_bottom"></div> 
+				  </div>
+				 </div>
+				 </div>
+				
+				<div class="blue_s"><img src="images/blue_s.png" alt=""></div>
+			 </div>
+				 	<!--Q6 answer-->
+				 
+				 	  <!--Q7 start-->	
+			<div id="q7" class="wrap_frame question  hide ">
+			    <div class="frame_left ">
+				   <span class="frame_top"></span>
+				   <div class="keymodel"><img src="images/kv.png" alt=""></div>
+					<p>Question <br><span>7</span></p>
+				<span class="frame_bottom"></span>
+				</div>
+				 <div class="info flex">
+					  <!--timer-->	
+					 <div class="timer ab"><span class="name_time">TIMER</span><div class="liner"><div><span></span></div></div></div>
+					 <div>
+				   <h3 >維他命 C 內服比外用好？</h3>
+				  <div class="btn_yesno" >	
+				  <a href="javascript:void(0)"><span>YES</span><img class="light" src="images/light.png" alt=""></a> 
+					<a href="javascript:void(0)"><span>NO</span><img class="light" src="images/light.png" alt=""></a>	 
+					 </div> 
+						 
+				 </div>
+				 </div>
+			 </div>
+				 	<!--Q7 end-->	
+				  	<!--Q7 answer-->	
+			<div id="a7" class="wrap_frame question hide ">
+			    <div class="frame_left ">
+				   <span class="frame_top"></span>
+				  
+				<div class="product flex  estee"><div><img src="images/estee.png" alt=""></div></div>
+				<span class="frame_bottom"></span>
+				</div>
+				 <div class="info flex answer">
+					
+					 <div>
+				   <h4><span>NO</span>維他命C內服比外用好？</h4>
+						
+					 <p>由食物攝取到的維他命C，大約只有7%能成功吸收進去，有研究發現，外塗相比口服，可使皮膚細胞吸收多20倍的維他命C，因此外塗更有效。
+						 </p>
+						 <p>
+					<strong>雅詩蘭黛《PRO極速光感煥白全能精華》</strong>針對黑色素形成路徑著手，搭配獨家酵母精粹和專利蜜糖成分攜手作用，讓你變白變亮一次到位！
+						 </p>
+				  <div class="btn gotoresult">
+					 <a href="javascript:void(0)" >
+					挑戰結束看結果 <span class="arrow_right"></span>
+					
+					 </a>
+						 <div class="light_bottom"></div> 
+				  </div>
+				 </div>
+				 </div>
+				
+				<div class="blue_s"><img src="images/blue_s.png" alt=""></div>
+			 </div>
+				 	<!--Q7 answer-->
+				 
+				<!--Q6 lose start-->	
+			<div  class="wrap_frame  result hide">
+				<div class="result_title_s ab"><img src="images/forplaytitle.png" alt=""></div>
+			     <div class="frame_left ">
+				   <span class="frame_top"></span>
+				   <div class="keymodel"><img src="images/kv.png" alt=""></div>
+					
+					<p class="scorenum"><span class="score">3</span> / 7    <br>
+					<span class="scorename">SCORE</span></p>
+					
+				<span class="frame_bottom"></span>
+				</div>
+				 <div class="info flex answer">
+					 
+					 <div>
+					 <p class="lose_text hide "><span class="fzb">糟糕了，你的戰力稍嫌不及格</span>，<br>小心在靚技場上地位不保，顏值隨時都有可能拉緊報！<br>記得定期關注 VOGUE，讓 VOGUE 為你打好肌礎，<br>不間斷為你補給美麗能量，就能美美地上場！</p>
+					 <p class="win_text hide"><span class="fzb">恭喜你，對於美妝新訊求知若渴的你，無疑是個擁有絕佳Sense的美妝資優生！</span><br>不過別忘了，保養可是一場長期抗戰，現代人遇到的保養挑戰也不斷升級，還是要定期關注VOGUE，持續更新你的保養戰鬥力！
+</p>
+						  <div class="btn replay">
+					 <a href="javascript:void(0)" >
+				重新玩一次 <span class="arrow_right"></span>
+					
+					 </a>
+						 <div class="light_bottom"></div> 
+				  </div> 
+						 
+						 
+				  <div class="btn gotoform">
+					 <a href="javascript:void(0)" >
+				抽美妝神器 <span class="arrow_right"></span>
+					
+					 </a>
+						 <div class="light_bottom"></div> 
+				  </div>
+						 
+				 </div>
+				 </div>
+				
+			
+			 </div>
+				 	<!--Q6 lose end-->	
+				 
+				 
+				 
+				 
+				 	<!--form start-->	
+			<div  class="wrap_frame hide formate ">
+
+			    <div class="frame_left ">
+				   <span class="frame_top"></span>
+				   <div class="keymodel"><img src="images/kv.png" alt=""></div>
+				<span class="frame_bottom"></span>
+				</div>
+				 <div class="info flex ">
+					 <div class="form">
+						 <p>
+即日起至3/31，填寫表單並公開分享活動至FB，就有機會把專櫃保養品正貨帶回家，詳情請見<a class="btn_dec" href="javascript:void(0)">活動說明</a>。</p>
+						
+				<ul>	 
+			    <li><input type="text" name="names" maxlength="100" placeholder="真實姓名" required></li>
+              <li><input type="tel" name="cell" maxlength="10" placeholder="手機範例 0900123456" title="請輸入正確手機格式 範例 0900123456" pattern="^09[0-9]{8}" required></li>
+              <li><input type="email" name="email" placeholder="E-MAIL" required/></li>	
+					
+              <li class="check"><label><input type="checkbox" name="checkboxOK" value="y" checked /> 已同意<a href="https://www.vogue.com.tw/policy" target="_blank">個資法條款</a></label>  </li>
+					
+			 </ul>		 
+						 
+						 
+						     <button type="submit" class="sent">填寫完成送出 <span class="arrow_right"></span></button> 
+						 
+						 
+				     </div>
+				 </div>
+			 </div>
+				 	<!--form end-->	 
+
+			 
+			 <div class="float_icon ab"> <img src="images/fade_bg.png" alt=""></div>
+			 </div>
+		   
+		</div>
+		
+		
+		
+		<!--frame  end-->	
+		
+	</div>
+	
+
+	
+	<footer>© 2020 Condé Nast</footer>
+	
+	
+</div>	
+	
+	
+	
+
+	
+	
+	
+	
+
+</body>
+</html>
