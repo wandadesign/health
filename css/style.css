@@ -70,9 +70,9 @@ image-rendering: crisp-edges;
 .doctor .dialog{position: absolute; right:100px;top:50px; }
 .doctor .dialog p{color:#fff;writing-mode: vertical-rl; font-weight: 700;font-size: 2rem; line-height: 1.2; display: block; border:3px solid #fff; border-radius: 5px; padding:20px 15px;}
 .doctor .dialog p strong{color:#eaff00;}
-.logline{ width: 3px; height:50px; background-color: #fff; position: absolute; transform: rotate(60deg); top:230px;right:131px }
-
-
+/*.logline{ width: 3px; height:50px; background-color: #fff; position: absolute; transform: rotate(60deg); top:230px;right:131px }
+*/
+.doctor .dialog p:before{ display: block; content:"";width: 3px; height:50px; background-color: #fff; position: absolute; transform: rotate(60deg); top:230px;right:131px}
 /*----- chaos -----*/
 #chaos{padding-bottom: 80px;}
 .container{  border-radius: 20px; background: url(../images/bg_s2.png) right bottom #fff no-repeat;}
@@ -250,7 +250,7 @@ image-rendering: crisp-edges;
   .title p{font-size:1rem ;}
   p{font-size: 1rem;}
   .doctor .dialog p{ font-size: 1.5rem;}
-  .logline{right: 112px;}
+  .doctor .dialog p:before{right: 112px;}
   .logo{width: 220px;}  
  .contain{ padding: 0 40px;}
 #chaos .contain{padding: 0 30px;}
@@ -325,7 +325,7 @@ h2{font-size: 2.6rem;}
   .title h2{font-size: 2rem;}
   .title{padding-bottom: 20px;}
   .doctor .dialog{top:10px; right:50px}
-  .logline{right: 109px;}
+  .doctor .dialog p:before{right: 109px;}
   .title p{margin-top: 10px; font-size: 0.93rem;}
   .title h2{margin-bottom: 10px;padding-bottom: 10px;}
   .doctor .dialog p{font-size: 1.4rem;}
@@ -455,10 +455,10 @@ h2{font-size: 2.4rem; text-align: center;}
 
 @media screen and (max-width: 414px){
   .header {padding: 0;}
-#kv{height: 507px;}
+
 span.logo{ margin: 10px 0 10px; width: 180px; }
 .doctor .dialog p{font-size: 1.2rem; padding:15px 10px; display: block;}
-.logline{top:130px; right:90px}
+.doctor .dialog p:before{top:130px; right:90px}
 .warn h3{padding: 20px 0 18px 35px;margin-top: 22px; width:68%; font-size: 1.375rem;}
 .warn .icon{width: 110px; }
 .container{border-radius: 10px;}
