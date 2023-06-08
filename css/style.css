@@ -60,13 +60,13 @@ image-rendering: crisp-edges;
 .navigation li a:hover{ color: #333; }
 
 /*----- kv -----*/
-#kv{padding-top: 70px; position: relative;}
+#kv{padding-top: 70px;}
 .title{ width: 45%;  z-index: 2; padding-left: 30px;}
 .title h1{font-size:10.625rem ; color: #fff; font-weight: 900; line-height: 1.1;}
 .title h2{color:#eaff00;font-size: 4.5rem; border-bottom: 1px solid #fff;font-weight: 900; margin-bottom: 20px; padding-bottom: 20px;}
 .title p{ color:#fff;font-size: 1.25rem;margin-top: 20px;}
 
-.doctor{margin-left: -10%;  width: 65%;}
+.doctor{margin-left: -10%;  width: 65%; position: relative;}
 .doctor .dialog{position: absolute; right:100px;top:50px; }
 .doctor .dialog p{color:#fff;writing-mode: vertical-rl; font-weight: 700;font-size: 2rem; line-height: 1.2; display: block; border:3px solid #fff; border-radius: 5px; padding:20px 15px;}
 .doctor .dialog p strong{color:#eaff00;}
