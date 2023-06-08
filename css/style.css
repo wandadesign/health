@@ -354,7 +354,7 @@ h2{font-size: 2.6rem;}
    .title {width: 100%;}
    .title h1{ font-size: 10rem; text-align: right;padding-right: 50px;}
   .doctor{ margin-left:-28% ;  width:100%; z-index: 2; margin-top: -33%; }
-  .doctor .dialog{top:35%; right:-18%; left:auto}
+  .doctor .dialog{top:35%; right:-18%;}
 .mobile_kv{ padding: 20px  30px 50px; background: linear-gradient(0deg, rgba(4,195,187,1) 0%, rgba(3,172,165,1) 50%);}
 h2{font-size: 2.4rem; text-align: center;}
 .mobile_kv h2{color:#eaff00 ;   }
@@ -454,12 +454,13 @@ h2{font-size: 2.4rem; text-align: center;}
 
 @media screen and (max-width: 414px){
   .header {padding: 0;}
-.doctor{position: relative;!important}
+.doctor{position: relative  !important;}
+.doctor .dialog{top:35%; right:-18%; position: absolute !important;}
 span.logo{ margin: 10px 0 10px; width: 180px; }
 .doctor .dialog p{font-size: 1.2rem; padding:15px 10px;}
 .logline{top:130px; right:90px}
 .warn h3{padding: 20px 0 18px 35px;margin-top: 22px; width:68%; font-size: 1.375rem;\ }
-.warn .icon{width: 110px;}
+.warn .icon{width: 110px; position: absolute !important;}
 .container{border-radius: 10px;}
 .owl-theme .owl-dots{margin-top: 0;}
 .owl-theme .owl-dots .owl-dot span{width: 8px; height: 8px;}
