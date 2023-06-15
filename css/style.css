@@ -133,7 +133,7 @@ image-rendering: crisp-edges;
 .instruct p .down {transform: rotate(45deg); -webkit-transform: rotate(45deg); }
 
 
-.tabs a{ display: block; background-color: #f4f4f4; color:#333 ; padding: 12px 25px; border-radius: 15px; font-weight: 700; font-size: 1.5rem; margin: 5px 8px; box-shadow: 0 5px 5px  rgba(0, 0, 0, 0.25); }
+.tabs a{ display: block; background-color: #eee; color:#333 ; padding: 12px 25px; border-radius: 15px; font-weight: 700; font-size: 1.5rem; margin: 5px 8px; box-shadow: 0 5px 5px  rgba(0, 0, 0, 0.25); }
 .tabs  li.active a{ background-color:#eaff00 ; color:#04c3bb; box-shadow: none;}
 .tabs a:hover{ box-shadow: none; background-color:#eaff00 ;}
 .info_tab{ margin-top: 30px;}
