@@ -58,16 +58,10 @@ $(function(){
     });
 
 
- //   $('#bt-more').click(function(){
- //       $('body,html').animate({scrollTop:$('#more').offset().top-50}, 800);
- //   });
-//    $('#bt-consult, #bt-more1, #bt-more2, #bt-more3').click(function(){
-  //      $('body,html').animate({scrollTop:$('#consult').offset().top-50}, 800);
-   // });
+
 });
-$(document).on("click","#bt-scroll",function(e){
-    $('body,html').animate({scrollTop:$('#school').offset().top-50}, 800);
-});
+
+
 
 // fix
 $(window).scroll(function() {

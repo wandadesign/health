@@ -20,7 +20,7 @@ a:link, a:visited ,a:hover ,a:active {text-decoration: none;}
 body, html {height: 100%;width: 100%; -webkit-text-size-adjust: 100%; background: #fff;
 text-rendering: optimizeLegibility !important;
 -webkit-font-smoothing: antialiased !important;
-font-family:'Noto Sans TC', Helvetica ,Arial ,Hiragino Sans GB,WenQuanYi Zen Hei,儷黑 Pro,LiHei Pro,微軟正黑體,sans-serif;}
+font-family: 'Noto Sans TC',Helvetica ,Arial ,Hiragino Sans GB,WenQuanYi Zen Hei,儷黑 Pro,LiHei Pro,微軟正黑體,sans-serif;}
 .flex{display: flex; justify-content: center;align-items: center; flex-wrap: wrap;}
 img{width: 100%; height: auto; display: block;}
 h2{font-weight: 900; letter-spacing: 1px;font-size: 3.125rem;}
@@ -126,12 +126,21 @@ image-rendering: crisp-edges;
 .s3_title h2{ color:#fff; margin-bottom: 20px; }
 .s3_title p{color:#fff; margin-top: 20px; font-weight: 700;  font-size: 1.25rem; }
 .s3_title p span{color: #eaff00;}
-.tabs a{ display: block; background-color: #f4f4f4; color:#333 ; padding: 12px 25px; border-radius: 15px; font-weight: 700; font-size: 1.5rem; margin: 5px 8px; box-shadow: 0 5px 5px  rgba(0, 0, 0, 0.25);}
+.instruct{text-align: center;}
+.instruct p{color:#f9ffb7; font-weight: bold;text-align: center; margin-top: 20px; }
+.instruct p .arrow { border: solid #f9ffb7; border-width: 0 3px 3px 0; display: inline-block; padding: 3px;animation:down .6s linear infinite   ;}
+@keyframes down {
+  0% { transform: translateY(-10px) rotate(45deg);}
+  100% {transform: translateY(0) rotate(45deg);}
+}
+.instruct p .down {transform: rotate(45deg); -webkit-transform: rotate(45deg); }
+
+
+.tabs a{ display: block; background-color: #f4f4f4; color:#333 ; padding: 12px 25px; border-radius: 15px; font-weight: 700; font-size: 1.5rem; margin: 5px 8px; box-shadow: 0 5px 5px  rgba(0, 0, 0, 0.25); }
 .tabs  li.active a{ background-color:#eaff00 ; color:#04c3bb; box-shadow: none;}
 .tabs a:hover{ box-shadow: none; background-color:#eaff00 ;}
-.info_tab{ margin-top: 50px;}
+.info_tab{ margin-top: 30px;}
 .tab_container{ background-color: #fff; border-radius: 20px; padding:  60px; margin-top: -30px;}
-
 .tab_container h3{font-size: 2.25rem; color:#04c3bb; text-align: center; margin-bottom: 30px;}
 .tab_container p strong{ color:#09aba7}
 .dec_box {width: 30%; }
@@ -170,6 +179,7 @@ image-rendering: crisp-edges;
 .tbl-row .row:nth-child(1){ background-color: #f5ff86;}
 .tbl-row .row:nth-child(6){ border-bottom:1px solid #e8e8e8}
 .tbl-row .row .th:nth-child(4){ flex:2}
+.tbl-row .row.frow{ background-color: #ffdad2;font-weight: 700;}
 
 #content_6 .dec_box p,#content_8 .dec_box p{ padding:20px 10px ;}
 #content_6 .dec_box h4,#content_8 .dec_box h4{ padding: 7px 0;}
@@ -189,7 +199,7 @@ image-rendering: crisp-edges;
 
 
 /*----- more -----*/
-#more{ background: linear-gradient(0deg, rgba(226,242,241,1) 0%, rgba(226,242,241,1) 74%, rgba(4,195,187,1) 74%, rgba(4,195,187,1) 100%); padding-bottom: 50px; padding-top: 50px; }
+#more{ background-color: #01b6b1;   }
 .contact_group{width: 70%; margin: 0 auto; background-color:#01b6b1 ;}
 .doctor_group { width: 55%;position: relative;}
 .button_group{width: 45%; margin-left: -5%; padding: 20px 0;}
@@ -342,7 +352,7 @@ h2{font-size: 2.6rem;}
   .tab_container{padding-top: 100px; margin-top: -100px;}
   .tab_container h3{margin-top: 20px;}
   .contact_group li a{font-size: 1rem;}
-
+  .doctor_group .sign{font-size: .8rem;}
 }
 
 /*mobile*/
@@ -393,6 +403,7 @@ h2{font-size: 2.4rem; text-align: center;}
 .box55{width: 100%;}
 .box55:nth-child(2n+0){ margin: 0;}
 .contact_group{width: 100%;}
+
 }
 
 @media screen and (max-width: 580px){
@@ -414,7 +425,7 @@ h2{font-size: 2.4rem; text-align: center;}
   .m_back a{ font-size: .985rem;display: inline-block; color:#fff; background-color: #ff6f28; padding:8px 50px ; border-radius: 50px; margin-bottom: 30px; margin-top: 20px;}
  #more .contain{padding: 0;}
  .doctor_group {width: 78%; margin-left: -20%;position: relative;}
- .doctor_group .sign{left: 100px;}
+ .doctor_group .sign{left: 90px;}
  .button_group{ z-index: 2; position: relative;}
  .contact_group li a{width: 80%; }
  .button_group{width: 50%;}
