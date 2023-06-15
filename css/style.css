@@ -124,8 +124,8 @@ image-rendering: crisp-edges;
 .s3_title p{color:#fff; margin-top: 20px; font-weight: 700;  font-size: 1.25rem; }
 .s3_title p span{color: #eaff00;}
 .instruct{text-align: center;}
-.instruct p{color:#e80000; font-weight: bold;text-align: center; margin-top: 20px; }
-.instruct p .arrow { border: solid #e80000; border-width: 0 3px 3px 0; display: inline-block; padding: 3px;animation:down .6s linear infinite   ;}
+.instruct p{color:#ffff98; font-weight: bold;text-align: center; margin-top: 20px; }
+.instruct p .arrow { border: solid #ffff98; border-width: 0 3px 3px 0; display: inline-block; padding: 3px;animation:down .6s linear infinite   ;}
 @keyframes down {
   0% { transform: translateY(-10px) rotate(45deg);}
   100% {transform: translateY(0) rotate(45deg);}
@@ -400,6 +400,7 @@ h2{font-size: 2.4rem; text-align: center;}
 .box55{width: 100%;}
 .box55:nth-child(2n+0){ margin: 0;}
 .contact_group{width: 100%;}
+
 
 }
 
