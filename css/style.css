@@ -473,6 +473,7 @@ span.logo{ margin: 10px 0 10px; width: 180px; }
 .owl-theme .owl-dots .owl-dot span{width: 8px; height: 8px;}
 .owl-carousel .owl-stage-outer{padding-bottom: 0;}
 .contact_group li a{font-size: .985rem ;}
+.tabs a{padding: 8px 13px;}
 }
 
 @media screen and (max-width: 375px){
