@@ -63,7 +63,6 @@ image-rendering: crisp-edges;
 .title p{ color:#fff;font-size: 1.25rem;margin-top: 20px;}
 
 .doctor{margin-left: -10%;  width: 65%; position: relative;}
-.doctor .dialog{ }
 .doctor .dialog p{position: absolute; right:20px;top:50px;  color:#fff;writing-mode: vertical-rl; font-weight: 700;font-size: 2rem; line-height: 1.2; display: block; border:3px solid #fff; border-radius: 5px; padding:20px 15px;}
 .doctor .dialog p strong{color:#eaff00;}
 /*.logline{ width: 3px; height:50px; background-color: #fff; position: absolute; transform: rotate(60deg); top:230px;right:131px }
