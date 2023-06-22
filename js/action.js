@@ -44,7 +44,7 @@ $(function(){
         $('body,html').animate({scrollTop:$('#chaos').offset().top-100}, 600);
     });
     $('#nav-section2').click(function(){
-        $('body,html').animate({scrollTop:$('#knowhow').offset().top-100}, 600);
+        $('body,html').animate({scrollTop:$('#revolution').offset().top-100}, 600);
     });
     $('#nav-section3').click(function(){
         $('body,html').animate({scrollTop:$('#data').offset().top-50}, 600);
@@ -75,67 +75,3 @@ else
     }
 });
 
-
-
-//曝光事件(非互動事件語法)
-let progEvent = [ 
-    {name: '#kvc', label: 'section-subject-kv', send: 0},
-    {name: '#symptom', label: 'section-subject-symptom', send: 0},
-    {name: '#choose', label: 'section-subject-quiz', send: 0},
-    {name: '#more', label: 'section-subject-morearticle', send: 0},
-    {name: '#consult', label: 'section-subject-reserve', send: 0}
-    ];
-    
-    
-    function checkAreaViewEvent() {
-        let scrollTop = $(window).scrollTop();
-        let windowHeight = $(window).height();
-        let viewArea = scrollTop + windowHeight;
-    
-        for (let i in progEvent){
-            if (progEvent[i].send !== 0) {
-                continue;
-            }
-    
-            let element = $(progEvent[i].name);
-            if (element.length == 0) {
-                progEvent[i].send = 1;
-                continue;
-            }
-            let areaTop = element.offset().top;
-            let areaHeight = element.height();
-            let area = areaTop + areaHeight;
-    
-            if (viewArea >= areaTop && scrollTop <= area) {
-                progEvent[i].send = 1;
-                dataLayer.push({
-                    'event': 'sendMyEvent',
-                    'eventCategory': 'web_event',
-                    'eventAction': '2022Bausch',
-                    'eventLabel': progEvent[i].label,
-                });
-    
-            }
-    
-        }
-    
-    }
-    
-    function debounce(func, delay) {
-        let timer = null;
-        return function() {
-            const context = this;
-            const args = arguments;
-            clearTimeout(timer);
-            timer = setTimeout(() => {
-                func.apply(context, args);
-            }, delay);
-        };
-    }
-    
-    $(document).on(
-        "scroll",
-        debounce(() => {
-            checkAreaViewEvent();
-        },30)
-    );
